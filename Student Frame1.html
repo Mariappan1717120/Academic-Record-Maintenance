@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #87CEEB;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: yellow;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 72px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: red;
+  padding: 10px 75px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:green;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href = "Attendance.html" target = "right"> Attendance Entry </a>
+  <a href="UnitTest.html" >Unit Test Mark Entry</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button>  
+<h2>Collapsed Sidepanel</h2>
+<p>Click on the hamburger menu/bar icon to open the sidepanel.</p>
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 
